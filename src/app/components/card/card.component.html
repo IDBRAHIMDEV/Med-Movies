@@ -1,0 +1,9 @@
+
+<div class="card my-2">
+    <a [routerLink]="['/movie', item.id]">
+        <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w300'+item.poster_path" [alt]="item.original_title">
+    </a>
+    <div class="card-body">
+        <h6 class="card-title">{{ item.original_title }}</h6>
+    </div>
+</div>

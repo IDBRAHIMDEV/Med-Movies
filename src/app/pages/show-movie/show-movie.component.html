@@ -1,0 +1,39 @@
+
+<div class="row">
+  <div class="col-md-3 text-center my-3">{{ movie.vote_count }} Votes</div>
+  <div class="col-md-3 text-center my-3">{{ movie.vote_average }} / 10 Average</div>
+  <div class="col-md-3 text-center my-3">{{ movie.status }}</div>
+  <div class="col-md-3 text-center my-3">{{ movie.release_date }}</div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+      
+      <app-slider [items]="[movie]"></app-slider>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="similar">Similar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="actors">Actors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="images">Images</a>
+            </li>
+         
+          </ul>
+          
+    </div>
+</div>
+
+<hr>
+
+<router-outlet></router-outlet>
