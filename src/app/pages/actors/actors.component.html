@@ -1,1 +1,22 @@
-<p>actors works!</p>
+
+<div class="row">
+    <div class="col-md-3 col-lg-2" *ngFor="let actor of actors">
+        <div class="card">
+            <img 
+                class="card-img-top" 
+                [src]="resolveImage(actor.profile_path)" 
+                alt="Title"
+            >
+        
+            <div class="card-body">
+                <h4 class="card-title">
+                    {{ actor.name }} 
+                    <span class="badge bg-success">
+                        {{ actor.popularity | number: '1.0-0' }}
+                    </span>
+                </h4>
+                
+            </div>
+        </div>
+    </div>
+</div>

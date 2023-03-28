@@ -8,6 +8,7 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { VideosComponent } from './pages/videos/videos.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path: 'images',
         component: ImagesComponent
+      },
+      {
+        path: 'videos',
+        component: VideosComponent
       }
     ]
   },

@@ -20,6 +20,14 @@ export class MovieService {
     return this.http.get(`${this.baseUrl}/movie/${id}/similar?api_key=${this.apiKey}`)
   }
 
+  getCreditsMovie(id: number) {
+    return this.http.get(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`)
+  }
+
+  getVideosMovie(id: number) {
+    return this.http.get(`${this.baseUrl}/movie/${id}/videos?api_key=${this.apiKey}`)
+  }
+
   getMovie(id: number) {
     return this.http.get(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`)
   }

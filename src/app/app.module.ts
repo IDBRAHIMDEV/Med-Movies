@@ -15,7 +15,9 @@ import { CardComponent } from './components/card/card.component';
 import { ShowMovieComponent } from './pages/show-movie/show-movie.component';
 import { SimilarComponent } from './pages/similar/similar.component';
 import { ActorsComponent } from './pages/actors/actors.component';
-import { ImagesComponent } from './pages/images/images.component'
+import { ImagesComponent } from './pages/images/images.component';
+import { VideosComponent } from './pages/videos/videos.component';
+import { YoutubeEmbedComponent } from './components/youtube-embed/youtube-embed.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ImagesComponent } from './pages/images/images.component'
     ShowMovieComponent,
     SimilarComponent,
     ActorsComponent,
-    ImagesComponent
+    ImagesComponent,
+    VideosComponent,
+    YoutubeEmbedComponent
   ],
   imports: [
     BrowserModule,
