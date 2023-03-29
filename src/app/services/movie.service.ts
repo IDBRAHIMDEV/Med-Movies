@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,14 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovies(option: string) {
-    return this.http.get(`${this.baseUrl}/movie/${option}?api_key=${this.apiKey}`)
+  getMovies(option: string, page: number = 1) {
+    return this.http.get(`${this.baseUrl}/movie/${option}?page=${page}&api_key=${this.apiKey}`)
   }
+
+  searchMovies(query: string, page: number = 1) {
+    return this.http.get(`${this.baseUrl}/search/movie?query=${query}&page=${page}&api_key=${this.apiKey}`)
+  }
+
 
   getSimilarMovies(id: number) {
     return this.http.get(`${this.baseUrl}/movie/${id}/similar?api_key=${this.apiKey}`)

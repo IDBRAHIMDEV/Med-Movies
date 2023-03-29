@@ -1,1 +1,21 @@
-<p>movies works!</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="grid">
+            <input (change)="search()" [(ngModel)]="searchValue" type="search" class="form-control" placeholder="Search the movies">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-lg-3 col-xl-2 col-sm-6" *ngFor="let popular of popularMovies">
+        <app-card [item]="popular"></app-card>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+<p-paginator (onPageChange)="paginate($event)" [rows]="20" [totalRecords]="752594"></p-paginator>
+    </div>
+</div>

@@ -18,6 +18,8 @@ import { ActorsComponent } from './pages/actors/actors.component';
 import { ImagesComponent } from './pages/images/images.component';
 import { VideosComponent } from './pages/videos/videos.component';
 import { YoutubeEmbedComponent } from './components/youtube-embed/youtube-embed.component'
+import { FormsModule } from '@angular/forms';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { YoutubeEmbedComponent } from './components/youtube-embed/youtube-embed.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
